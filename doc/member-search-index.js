@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"guessthenumber","c":"DefineNumberToGuess","l":"defineNumber(int, int)","u":"defineNumber(int,int)"},{"p":"guessthenumber","c":"DefineNumberToGuess","l":"DefineNumberToGuess()","u":"%3Cinit%3E()"}];updateSearchResults();
