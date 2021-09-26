@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"guessthenumber","c":"DefineNumberToGuess","l":"defineNumber(int, int)","u":"defineNumber(int,int)"},{"p":"guessthenumber","c":"DefineNumberToGuess","l":"DefineNumberToGuess()","u":"%3Cinit%3E()"}];updateSearchResults();
+memberSearchIndex = [{"p":"guessthenumber","c":"GuessTheNumber","l":"GuessTheNumber()","u":"%3Cinit%3E()"},{"p":"guessthenumber","c":"GuessTheNumber","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
