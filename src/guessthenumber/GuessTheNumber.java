@@ -3,7 +3,7 @@ package guessthenumber;
 
 /**
  * <b>Petit jeu visant à deviner un nombre dans un interval.</b>
- * <p>
+ *
  * Le programme se déroule en 5 étapes :
  * <ul>
  * <li>On demande au joueur la limie haute de l'interval</li>
@@ -14,20 +14,25 @@ package guessthenumber;
  * <li>Si le chiffre proposé est le bon, on lui affiche un message de succès.
  * Sinon on lui indique si le chiffre est inférieur ou supérieur, et on lui demande un nouveau chiffre. </li>
  * </ul>
- * </p>
+ *
  * 
  * 
  * @author RomainCarrillo
- * @version 1.1
+ * @version 1.1git sat
  *
  */
 
 public class GuessTheNumber {
+	/**
+	 * 
+	 * @param arg Non utilisé
+	 */
 	public static void main(String[] arg) {
 		System.out.println("Entrez le maximum autorisé :");
 		int maxInterval = AskForNumber.askForNumber();
 		int miniInterval = DefineMiniInterval.defineMiniInterval(maxInterval);
 		int numberToGuess = DefineNumberToGuess.defineNumber(maxInterval, miniInterval);
 		AskProposal.askProposal(numberToGuess);
+		AttemptsCounter.getAttempsNumber();
 	}
 }

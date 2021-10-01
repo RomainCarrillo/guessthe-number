@@ -16,6 +16,7 @@ public class AskProposal {
 	public static void askProposal(int numberToGuess) {
 		System.out.println("Proposez un chiffre :");
 		int proposal = AskForNumber.askForNumber();
+		AttemptsCounter.countAttempts();
 		if (CompareNumbers.compareNumbers(numberToGuess, proposal)) {
 			System.out.println("Gagné la réponse est " + proposal + " !");
 		} else {
