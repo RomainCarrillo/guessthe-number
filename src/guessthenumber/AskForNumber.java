@@ -19,16 +19,16 @@ public class AskForNumber {
 	 */
 	public static int askForNumber() {			
 			boolean checkIfNumber;
-			String saisie;
+			String userInput;
 			do {
 				Scanner scanner = new Scanner(System.in);
-				 saisie = scanner.next();
-				 checkIfNumber = saisie.matches("\\d*");
+				 userInput = scanner.next();
+				 checkIfNumber = userInput.matches("\\d*");
 				 if (! checkIfNumber) {
 					 System.out.println("Merci de saisir un nombre en chiffres, supérieur ou égale à 0");
 				 }
 			} while (! checkIfNumber);
-			int number = Integer.parseInt(saisie);
+			int number = Integer.parseInt(userInput);
 			return number;
 	}
 }

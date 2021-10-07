@@ -18,7 +18,7 @@ package guessthenumber;
  * 
  * 
  * @author RomainCarrillo
- * @version 1.1git sat
+ * @version 2.1
  *
  */
 
@@ -28,10 +28,15 @@ public class GuessTheNumber {
 	 * @param arg Non utilisé
 	 */
 	public static void main(String[] arg) {
-		System.out.println("Entrez le maximum autorisé :");
-		int maxInterval = AskForNumber.askForNumber();
-		int miniInterval = DefineMiniInterval.defineMiniInterval(maxInterval);
-		int numberToGuess = DefineNumberToGuess.defineNumber(maxInterval, miniInterval);
+		
+		LevelDefinition selectedLevel;
+		
+		AvailableLevels.setAvailableLevels();
+		
+		selectedLevel = SelectDifficulty.selectDifficulty();
+		// TODO afficher l'interval
+		selectedLevel.getIntervalInfos();
+		int numberToGuess = DefineNumberToGuess.defineNumber(selectedLevel.getMaxInterval(), selectedLevel.getMiniInterval());
 		AskProposal.askProposal(numberToGuess);
 		AttemptsCounter.getAttempsNumber();
 	}
