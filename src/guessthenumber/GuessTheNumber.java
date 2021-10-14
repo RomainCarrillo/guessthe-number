@@ -18,23 +18,16 @@ package guessthenumber;
  * 
  * 
  * @author RomainCarrillo
- * @version 2.1
+ * @version 3
  *
  */
 
 public class GuessTheNumber {
-	/**
-	 * 
-	 * @param arg Non utilisé
-	 */
 	public static void main(String[] arg) {
 		
 		LevelDefinition selectedLevel;
-		
 		AvailableLevels.setAvailableLevels();
-		
 		selectedLevel = SelectDifficulty.selectDifficulty();
-		// TODO afficher l'interval
 		selectedLevel.getIntervalInfos();
 		int numberToGuess = DefineNumberToGuess.defineNumber(selectedLevel.getMaxInterval(), selectedLevel.getMiniInterval());
 		AskProposal.askProposal(numberToGuess);

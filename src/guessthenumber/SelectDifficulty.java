@@ -1,11 +1,10 @@
 package guessthenumber;
 
+
 /**
- * <b>Permet au joueur de sélectionner un niveau prédéfini ou un interval
- * personnalisé</b>
+ * <b>Permet au joueur de sélectionner un niveau prédéfini ou un interval personnalisé</b>
  * 
  * @author RomainCarrillo
- * @version 1.1
  */
 public class SelectDifficulty {
 
@@ -14,12 +13,9 @@ public class SelectDifficulty {
 	
 	public static LevelDefinition selectDifficulty() {
 		userInput = AskLevel.askLevel();
-		
-		//TODO Remplacer "P" par une variable
-		if (userInput.equalsIgnoreCase("P")) {
-			int maxInterval = AskForNumber.askForNumber();
-			LevelDefinition personnalLevel = new LevelDefinition("P", maxInterval);
-			selectedLevel = personnalLevel;
+		if (AskLevel.checkIfCustomLevel()) {
+			LevelDefinition customLevel = SetCustomLevel.setCustomLevel();
+			selectedLevel = customLevel;
 		} else if (AskLevel.checkIfLevelSet(userInput)) {
 			for (LevelDefinition level : AvailableLevels.availableLevels) {
 				if (userInput.equals(level.levelID)) {

@@ -4,7 +4,6 @@ package guessthenumber;
  * <b>Modèle pour définir un niveau de difficulté</b>
  * 
  * @author RomainCarrillo
- * @version 1.1 
  */
 public class LevelDefinition {
 	public String levelID;
@@ -15,17 +14,24 @@ public class LevelDefinition {
 		this.levelID = levelID;
 		this.maxInterval = maxInterval;
 	}
+	public LevelDefinition(String levelID) {
+		this.levelID = levelID;
+	}
 	
-	//TODO Créer méthode public static int getMaxInterval() {} 
 	public int getMaxInterval() {
 		return maxInterval;
 	}
-	//TODO Créer méthode public static int getMiniInterval() {} 
+
 	public int getMiniInterval() {
 		return miniInterval;
 	}
-	//TODO Créer méthode public static String getIntervalInfos() {}
+	
 	public void getIntervalInfos() {
 		System.out.println("Le chiffre est compris entre " + miniInterval + " et " + maxInterval);
+	}
+	
+	public void setMaxInterval() {
+		System.out.println("Saisissez la valeur maximale possible pour l'interval :");
+		this.maxInterval = AskForNumber.askForNumber();
 	}
 }

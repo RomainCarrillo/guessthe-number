@@ -24,6 +24,14 @@ public class AskLevel {
 		}
 		return levelIsSet;
 	}
+	
+	public static boolean checkIfCustomLevel() {
+		boolean useCustomLevel = false;
+		if (userInput.equalsIgnoreCase("P")) {
+			useCustomLevel = true;
+		}
+		return useCustomLevel;
+	}
 
 
 }

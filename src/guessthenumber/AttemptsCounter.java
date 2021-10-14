@@ -5,7 +5,6 @@ package guessthenumber;
  * <b>Gestion du compteur de tentatives</b>
  * 
  * @author RomainCarrillo
- * @version 1.1
  */
 public class AttemptsCounter {
 	private static int attemptsNumber;

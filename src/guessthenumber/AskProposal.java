@@ -5,7 +5,6 @@ package guessthenumber;
  * <b>Demande au joueur de faire une proposition et compare celle-ci au nombre à deviner</b>
  * 
  * @author RomainCarrillo
- * @version 1.1
  */
 
 public class AskProposal {

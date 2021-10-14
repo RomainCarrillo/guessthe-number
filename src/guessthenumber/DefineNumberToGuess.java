@@ -7,7 +7,6 @@ package guessthenumber;
  * 
  * 
  * @author RomainCarrillo
- * @version 1.1
  */
 
 public class DefineNumberToGuess {
